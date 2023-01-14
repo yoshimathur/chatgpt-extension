@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3, 
+    "name": "GoneJawn",
+    "version": "1.0.0",
+    "description": "GoneJawn's Chat GPT Chrome Extension - Answer Questions With Ease",
+
+    "action": {
+        "default_popup": "/screens/popup.html",
+        "default_icon": "/assets/favicon.png"
+    }, 
+
+    "permissions": [
+        "scripting",
+        "activeTab", 
+        "tabs"
+    ], 
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ], 
+            "all_frames": true, 
+            "js": [
+                "/inject/content.js"
+            ],
+            "css": [
+                "/inject/dialog.css"
+            ]
+        }
+    ]
+}

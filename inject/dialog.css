@@ -1,0 +1,10 @@
+#dialog-holder {
+    position: absolute;
+    top: 15px; right: 15px; 
+    width: 300px; 
+    height: 500px;
+    border-radius: 25px;
+    z-index: 200000000;
+    background-color: #1c1c1c;
+    user-select: none;
+}
