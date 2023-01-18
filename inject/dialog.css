@@ -12,7 +12,7 @@
     position: fixed;
     top: 15px; right: 15px; 
     width: 300px; 
-    height: 500px;
+    height: auto;
     border-radius: 25px;
     padding: 0; margin: 0; 
     z-index: 200000000;
@@ -29,7 +29,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 25px; 
+    padding: 0 25px; 
+    height: 46px;
     background-color: var(--accentColor);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -40,7 +41,7 @@
 #athena-dialog-header-title {
     all: unset; 
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--background);
 }
 
@@ -63,7 +64,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 18px 25px; 
+    margin: 0 25px; 
+    height: 66px;
 }
 
 #athena-footer-holder-left {
@@ -104,7 +106,6 @@
 
 #athena-dialog-content {
     all: unset;
-    height: calc(500px - 44px - 66px);
     margin: 0 25px; 
     display: flex;
     flex-direction: column;
@@ -123,11 +124,11 @@
 
 #athena-question-title{
     all: unset;
-    font-family: "Cousine", bold;
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
     color: var(--mainColor);
-    margin-top: 15px;
-    margin-bottom: 5px;
+    height: 40px;
 }
 
 #athena-question-input{
@@ -143,11 +144,11 @@
 
 #athena-answer-title{
     all: unset;
-    font-family: "Cousine", bold;
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
     color: var(--mainColor);
-    margin-top: 15px;
-    margin-bottom: 5px;
+    height: 40px; 
 }
 
 #athena-answer-input{

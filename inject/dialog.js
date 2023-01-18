@@ -66,15 +66,6 @@ if (window != window.top) {
     dialogContent.appendChild(dialogForm);
     dialogHolder.appendChild(dialogContent);
 
-
-
-
-
-
-
-
-
-
     // Footer -- 67.36 px
     const dialogFooter = document.createElement("div");
     dialogFooter.setAttribute("id", "athena-footer-holder");
