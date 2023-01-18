@@ -1,7 +1,7 @@
 if (window != window.top) {
     console.log("~athena: GET ME THE FUCK OUT OF THIS IFRAME");
 } else {
-    // Dialog creation
+    // Dialog creation//superwonder1227!
 
     // Holder
     const dialogHolder = document.createElement("div");
@@ -32,12 +32,48 @@ if (window != window.top) {
     const dialogContent = document.createElement("div");
     dialogContent.setAttribute('id', 'athena-dialog-content');
 
-    const questionTitle = document.createElement("h2");
+    const dialogForm = document.createElement("form");
+    dialogForm.setAttribute("action", "/");
+    dialogForm.setAttribute("method", "get");
+    dialogForm.setAttribute("id","athena-dialog-form");
+
+    const questionTitle = document.createElement("label");
+    questionTitle.setAttribute("for", "athena-question-input");
+    questionTitle.setAttribute("id", "athena-question-title");
     questionTitle.innerHTML = "Question";
 
-    const question = document.createElement
+    const questionInput = document.createElement("textarea");
+    questionInput.setAttribute("type","text");
+    questionInput.setAttribute("id","athena-question-input");
+    questionInput.setAttribute("name", "athena-question-input");
+    //questionInput.setAttribute("rows", "4");
 
+    const answerTitle = document.createElement("label");
+    answerTitle.setAttribute("for", "athena-answer-input");
+    answerTitle.setAttribute("id", "athena-answer-title");
+    answerTitle.innerHTML = "Answer";
+
+    const answerInput = document.createElement("textarea");
+    answerInput.setAttribute("type","text");
+    answerInput.setAttribute("id","athena-answer-input");
+    answerInput.setAttribute("name", "athena-answer-input");
+    //answerInput.setAttribute("rows", "7");
+
+    dialogForm.appendChild(questionTitle);
+    dialogForm.appendChild(questionInput);
+    dialogForm.appendChild(answerTitle);
+    dialogForm.appendChild(answerInput);
+    dialogContent.appendChild(dialogForm);
     dialogHolder.appendChild(dialogContent);
+
+
+
+
+
+
+
+
+
 
     // Footer -- 67.36 px
     const dialogFooter = document.createElement("div");
@@ -132,4 +168,4 @@ if (window != window.top) {
           document.onmousemove = null;
       }
     }
-}x
+}

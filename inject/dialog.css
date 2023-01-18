@@ -57,14 +57,8 @@
     filter: invert(22%) sepia(100%) saturate(2231%) hue-rotate(166deg) brightness(96%) contrast(102%);
 }
 
-
-#athena-dialog-content {
-    height: calc(500px - 44px - 66px);
-    margin: 0 25px; 
-}
-
-
 #athena-footer-holder {
+    all: unset;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -108,3 +102,61 @@
     font-size: 15px; 
 }
 
+#athena-dialog-content {
+    all: unset;
+    height: calc(500px - 44px - 66px);
+    margin: 0 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#athena-dialog-form{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#athena-question-title{
+    all: unset;
+    font-family: "Cousine", bold;
+    font-size: 14px;
+    color: var(--mainColor);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#athena-question-input{
+    all: unset;
+    width: 90%;
+    height: 110px;
+    border-radius: 15px;
+    padding: 10px;
+    resize: none;
+    background-color: #2d2d2d;
+    border: 1px solid var(--accentColor);
+}
+
+#athena-answer-title{
+    all: unset;
+    font-family: "Cousine", bold;
+    font-size: 14px;
+    color: var(--mainColor);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#athena-answer-input{
+    all: unset;
+    width: 90%;
+    height: 160px;
+    border-radius: 15px;
+    padding: 10px;
+    resize: none;
+    background-color: #2d2d2d;
+    border: 1px solid var(--accentColor);
+}
