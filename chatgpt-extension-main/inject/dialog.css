@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Modak&family=Monofett&family=Pacifico&family=Passions+Conflict&family=Poppins:wght@300&family=Righteous&family=Roboto&family=Roboto+Mono&display=swap');
+
+:root {
+    --mainColor : #95EEF8; 
+    --accentColor: #B3F5F6; 
+    --darkAccent: #008083;
+    --background: #1c1c1c;
+}
+
+#athena-dialog-holder {
+    all: unset; 
+    position: fixed;
+    top: 15px; right: 15px; 
+    width: 300px; 
+    height: 500px;
+    border-radius: 25px;
+    padding: 0; margin: 0; 
+    z-index: 200000000;
+    background-color: #1c1c1c;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    font-family: "Cousine", monospace !important;
+}
+
+
+#athena-dialog-header {
+    all: unset; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 25px; 
+    background-color: var(--accentColor);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 200000001;
+    cursor: grab; 
+}
+
+#athena-dialog-header-title {
+    all: unset; 
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--background);
+}
+
+#athena-dialog-header-button{
+    all: unset;
+    background: transparent; 
+    outline: transparent; 
+}
+
+#athena-header-button-img {
+    all: unset; 
+    width: 18px; 
+    height: 18px; 
+    filter: invert(22%) sepia(100%) saturate(2231%) hue-rotate(166deg) brightness(96%) contrast(102%);
+}
+
+#athena-footer-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 25px; 
+}
+
+#athena-footer-holder-left {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.athena-footer-button {
+    all: unset;
+    position: relative;
+    background: var(--accentColor); 
+    height: 30px; 
+    width: 30px; 
+    padding: 0; margin: 0; 
+    border-radius: 15px;
+}
+
+.athena-footer-button-img {
+    all: unset; 
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 18px; 
+    height: 18px; 
+    filter: invert(22%) sepia(100%) saturate(2231%) hue-rotate(166deg) brightness(96%) contrast(102%);
+
+}
+
+#athena-member-status {
+    all: unset; 
+    padding: 4px;
+    border-radius: 4px;
+    background-color: var(--accentColor);
+    color: var(--darkAccent);
+    font-size: 15px; 
+}
+
+#athena-dialog-content {
+    height: calc(500px - 44px - 66px);
+    margin: 0 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#athena-dialog-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#athena-question-title{
+    font-family: "Cousine", bold;
+    font-size: 14px;
+    color: var(--mainColor);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#athena-question-input{
+    width: 90%;
+    border-radius: 15px;
+    padding: 10px;
+    resize: none;
+    background-color: #2d2d2d;
+    border-color: var(--accentColor);
+}
+
+#athena-answer-title{
+    font-family: "Cousine", bold;
+    font-size: 14px;
+    color: var(--mainColor);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#athena-answer-input{
+    width: 90%;
+    border-radius: 15px;
+    padding: 10px;
+    resize: none;
+    background-color: #2d2d2d;
+    border-color: var(--accentColor);
+}
