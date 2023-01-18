@@ -22,10 +22,22 @@
             ], 
             "all_frames": true, 
             "js": [
+                "/inject/dialog.js",
                 "/inject/content.js"
             ],
             "css": [
                 "/inject/dialog.css"
+            ]
+        }
+    ],
+
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "/assets/*"
+            ],
+            "matches": [
+                "<all_urls>"
             ]
         }
     ]

@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Modak&family=Monofett&family=Pacifico&family=Passions+Conflict&family=Poppins:wght@300&family=Righteous&family=Roboto&family=Roboto+Mono&display=swap');
 
 :root {
-    --mainColor : #15d673; 
-    --accentColor: #AFF5D1; 
-    --darkAccent: #165C38;
+    --mainColor : #95EEF8; 
+    --accentColor: #B3F5F6; 
+    --darkAccent: #008083;
     --background: #1c1c1c;
 }
 
 body {
     margin: 0; padding: 0; 
-    width: 400px; 
+    width: 350px; 
     font-family: "Cousine", monospace !important;
     background-color: var(--background);
     color: white; 

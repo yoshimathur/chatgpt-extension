@@ -1,9 +1,4 @@
-console.log("~GoneJawn: Connection established!"); 
-
-// Document creation
-const dialogHolder = document.createElement("div");
-dialogHolder.setAttribute('id', 'dialog-holder');
-document.body.prepend(dialogHolder);
+console.log("~Athena: Connection established!"); 
 
 // Enabling user select on all elements in case it's blocked
 var elems = document.getElementsByTagName("*");
@@ -44,3 +39,5 @@ var frames2 = document.getElementsByTagName('iframe');
         }
     }
 });
+
+// dialog html
