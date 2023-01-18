@@ -46,7 +46,7 @@ if (window != window.top) {
     questionInput.setAttribute("type","text");
     questionInput.setAttribute("id","athena-question-input");
     questionInput.setAttribute("name", "athena-question-input");
-    questionInput.setAttribute("rows", "7");
+    //questionInput.setAttribute("rows", "4");
 
     const answerTitle = document.createElement("label");
     answerTitle.setAttribute("for", "athena-answer-input");
@@ -57,7 +57,7 @@ if (window != window.top) {
     answerInput.setAttribute("type","text");
     answerInput.setAttribute("id","athena-answer-input");
     answerInput.setAttribute("name", "athena-answer-input");
-    answerInput.setAttribute("rows", "10");
+    //answerInput.setAttribute("rows", "7");
 
     dialogForm.appendChild(questionTitle);
     dialogForm.appendChild(questionInput);
