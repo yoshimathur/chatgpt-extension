@@ -57,6 +57,7 @@ if (window != window.top) {
     answerInput.setAttribute("type","text");
     answerInput.setAttribute("id","athena-answer-input");
     answerInput.setAttribute("name", "athena-answer-input");
+    answerInput.setAttribute("readonly", "true");
     //answerInput.setAttribute("rows", "7");
 
     dialogForm.appendChild(questionTitle);
