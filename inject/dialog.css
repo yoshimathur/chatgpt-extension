@@ -10,9 +10,11 @@
 #athena-dialog-holder {
     all: unset; 
     position: fixed;
+    overflow: hidden;
     top: 15px; right: 15px; 
     width: 300px; 
-    height: auto;
+    height: 500px;
+    max-height: 510px;
     border-radius: 25px;
     padding: 0; margin: 0; 
     z-index: 200000000;
@@ -30,7 +32,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 25px; 
-    height: 46px;
+    height: 50x;
+    overflow: hidden;
+    min-height: 50px;
+    max-width: 250px;
+    width: 250px;
     background-color: var(--accentColor);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -47,6 +53,8 @@
 
 #athena-dialog-header-button{
     all: unset;
+    width: 20px;
+    height: 20px;
     background: transparent; 
     outline: transparent; 
 }
@@ -56,6 +64,14 @@
     width: 18px; 
     height: 18px; 
     filter: invert(22%) sepia(100%) saturate(2231%) hue-rotate(166deg) brightness(96%) contrast(102%);
+    cursor: pointer;
+}
+#athena-minimized-header-button-img {
+    all: unset;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    cursor: pointer;
 }
 
 #athena-footer-holder {
@@ -171,30 +187,90 @@
 }
 
 .athena-answer-input-flashing {
-    color: var(--mainColor);
-    -webkit-animation: pulsate 3s ease-out infinite;
-    animation: pulsate 3s ease-out infinite;
+    all: unset;
+    -webkit-animation: pulsate 3s ease-out infinite !important;
+    animation: pulsate 3s ease-out infinite !important;
 }
 
 @-webkit-keyframes pulsate {
     0% { 
-        opacity: 0.5;
+        color: rgba(255,255,255, 0.2);
     }
     50% { 
-        opacity: 1.0;
+        color: rgba(255,255,255, 1);
     }
     100% { 
-        opacity: 0.5;
+        color: rgba(255,255,255, 0.2);
     }
 }
 @keyframes pulsate {
     0% { 
-        opacity: 0.5;
+        color: rgba(255,255,255, 0.2);
     }
     50% { 
-        opacity: 1.0;
+        color: rgba(255,255,255, 1);
     }
     100% { 
-        opacity: 0.5;
+        color: rgba(255,255,255, 0.2);
     }
 }
+
+.athena-dialog-holder-close {
+    animation: closeDialog 0.5s ease-out forwards, shrinkDialog 0.2s ease-out forwards 0.75s !important;
+}
+
+.athena-dialog-holder-open {
+    animation: closeDialog 0.5s ease-out reverse, shrinkDialog 0.2s ease-out reverse 0.75s !important;
+}
+
+@keyframes closeDialog {
+    0% {
+        width: 300px;
+        max-height: 510px;
+    }
+
+    100% {
+        width: 300px;
+        max-height: 50px;
+    }
+}
+
+@keyframes shrinkDialog {
+    0% {
+        width: 300px;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.athena-dialog-header-close {
+    /* animation: closeHeader 0.2s ease-in forwards 0.5s, closeHeader2 0.01s linear forwards 0.76s !important;
+    overflow: hidden; */
+    width: 50px !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+/* @keyframes closeHeader {
+    0% {
+        height: 50px;
+        max-width: 250px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        padding: 0 25px;
+    }
+
+    100% {
+        height: 50px;
+        max-width: 50px;
+        border-radius: 25px;
+        padding: 0;
+        margin-left: 83.333%;
+    }
+} */
+
+

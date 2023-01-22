@@ -15,14 +15,47 @@ if (window != window.top) {
     headerTitle.innerHTML = "athena";
     headerTitle.setAttribute('id', 'athena-dialog-header-title');
 
-    const headerButton = document.createElement("button");
-    headerButton.setAttribute('id', 'athena-dialog-header-button');
-
     const headerButtonImage = document.createElement("img");
     const minimizeImg = chrome.runtime.getURL("assets/minimize.png");
     headerButtonImage.setAttribute('src', minimizeImg);
     headerButtonImage.setAttribute('id', 'athena-header-button-img');
+    
+    const headerButton = document.createElement("button");
+    headerButton.setAttribute('id', 'athena-dialog-header-button');
     headerButton.appendChild(headerButtonImage);
+    headerButton.onclick = function(){
+        dialogHolder.classList.add("athena-dialog-holder-close");
+        setTimeout(() => {
+            dialogHeader.classList.add("athena-dialog-header-close");
+            dialogHeader.removeChild(headerTitle);
+            dialogHeader.removeChild(headerButton);
+            dialogHeader.appendChild(headerMinimizedButton);
+
+
+            // headerButton.removeChild(headerButtonImage);
+            // headerButton.appendChild(headerMinimizedButtonImage);
+        }, 800);
+
+    };
+
+    const headerMinimizedButtonImage = document.createElement("img");
+    const minimizedImg = chrome.runtime.getURL("assets/spear.png");
+    headerMinimizedButtonImage.setAttribute('src', minimizedImg);
+    headerMinimizedButtonImage.setAttribute('id', 'athena-minimized-header-button-img');
+
+    const headerMinimizedButton = document.createElement("button");
+    headerMinimizedButton.setAttribute('id', 'athena-dialog-header-button');
+    headerMinimizedButton.appendChild(headerMinimizedButtonImage);
+    headerMinimizedButton.onclick= function() {
+        dialogHolder.classList.add("athena-dialog-holder-open");
+        setTimeout(() => {
+            dialogHeader.classList.remove("athena-dialog-header-close");
+            dialogHeader.appendChild(headerTitle);
+            dialogHeader.removeChild(headerMinimizedButton);
+            dialogHeader.appendChild(headerButton);
+        }, 800);
+    }
+
 
     dialogHeader.appendChild(headerTitle);
     dialogHeader.appendChild(headerButton);

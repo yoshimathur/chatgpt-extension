@@ -1,6 +1,9 @@
 console.log("~Athena: Connection established!"); 
 
-const enabled = true; //Should api calls be made
+const qInput = document.getElementById("athena-question-input");
+const aInput = document.getElementById("athena-answer-input");
+
+const enabled = false; //Should api calls be made
 let aiTempValue = 0.5;
 
 // Enabling user select on all elements in case it's blocked
@@ -48,22 +51,22 @@ document.onmouseup = function() {
         //     alert(response);
         // });
 
-        document.getElementById("athena-question-input").innerHTML = selectedText;
-        document.getElementById("athena-answer-input").innerHTML = "Generating Response...";
-        document.getElementById("athena-answer-input").classList.add("athena-answer-input-flashing");
+        qInput.innerHTML = selectedText;
+        aInput.innerHTML = "Generating Response...";
+        aInput.classList.add("athena-answer-input-flashing");
 
         if (enabled) {
-            document.getElementById("athena-answer-input").classList.remove("athena-answer-input-flashing");
+            aInput.classList.remove("athena-answer-input-flashing");
             fetch('https://athena-ox55.onrender.com/api/?questionText=' + selectedText + "&openAITemp=" + aiTempValue).then(r => r.text()).then(result => {
 
                 console.log("Result from Fetch: " + result);
 
                 try {
                     const parsedResult = JSON.parse(result);
-                    document.getElementById("athena-answer-input").innerHTML = parsedResult.answer.trim();
+                    aInput.innerHTML = parsedResult.answer.trim();
                 } catch (e) {
                     console.log(e);
-                    document.getElementById("athena-answer-input").innerHTML = result.trim();
+                    aInput.innerHTML = result.trim();
                 }
 
             })
