@@ -1,0 +1,14 @@
+.content-holder {
+    display: flex;
+    flex-direction: row;
+    margin: 0 25px; 
+    margin-top: 10px; 
+}
+
+.toggle-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}

@@ -12,14 +12,14 @@
     "permissions": [
         "scripting",
         "activeTab", 
-        "tabs"
+        "tabs",
+        "management"
     ], 
 
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>",
-                "http://localhost/*"
+                "<all_urls>"
             ], 
             "all_frames": true, 
             "js": [

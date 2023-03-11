@@ -3,6 +3,8 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/content.css">
+        <link rel="stylesheet" href="/styles/switch.css">
         <link rel="stylesheet" href="/styles/footer.css">
     </head>
 
@@ -21,11 +23,25 @@
 
         <hr>
 
+        <div class="content-holder">
+            <div class="toggle-holder">
+                <h2>Toggle Extension</h2>
+                <div class="slider-holder">
+                    <label class="switch">
+                        <input id="toggle-button" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-holder">
+            <a href="">Support</a>
             <a href="">Terms</a>
             <a href="">Privacy</a>
-            <a href="">Cookies</a>
         </div>
 
     </body>
+
+    <script src="../scripts/toggle.js"></script>
 </html>

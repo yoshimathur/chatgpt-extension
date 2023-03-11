@@ -80,7 +80,7 @@ var frames2 = document.getElementsByTagName('iframe');
     frame.contentWindow.document.onmouseup = function() { 
         var selectedText = frame.contentWindow.getSelection(); 
         if (selectedText.toString().length > 0) { 
-//            alert(selectedText); 
+            //alert(selectedText); 
             // var client = new HttpClient();
             // client.get('https://athena-ox55.onrender.com/api/?questionText=' + selectedText, function(response) {
             //     alert(response);

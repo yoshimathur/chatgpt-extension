@@ -10,9 +10,12 @@
 body {
     margin: 0; padding: 0; 
     width: 350px; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
     font-family: "Cousine", monospace !important;
     background-color: var(--background);
-    color: white; 
+    color: #fff; 
 }
 
 h1 {
@@ -21,9 +24,15 @@ h1 {
     color: var(--mainColor);
 }
 
+h2 {
+    padding: 0; margin: 0; 
+    font-size: 13px; 
+    color: #fff; 
+}
+
 span {
     font-size: 12px;
-    color: white;
+    color: #fff;
 }
 
 a {
